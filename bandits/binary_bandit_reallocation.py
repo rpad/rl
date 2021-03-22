@@ -13,7 +13,7 @@ control_mean = 3.0
 exp_mean = 3.8
 control_var = 1.0
 exp_var = 0.8
-plot_on = False
+plot_on = True
 num_sim = 10000
 daily_budget = 100
 
@@ -33,6 +33,9 @@ roas = {'control': control_roas, 'exp': experiment_roas}
 if plot_on:
     sns.kdeplot(control_roas)
     sns.kdeplot(experiment_roas)
+    plt.savefig("binary_roas_kdeplot.png")
+    plt.cla()
+    plt.clf()
 
 daily_budgets = [daily_budget] * num_days_experiment
 
