@@ -16,7 +16,7 @@ a4_mean = 3.8475
 
 var = 1
 
-plot_on = False
+plot_on = True
 num_sim = 10000
 daily_budget = 100
 
@@ -39,6 +39,9 @@ if plot_on:
     sns.kdeplot(a2_roas)
     sns.kdeplot(a3_roas)
     sns.kdeplot(a4_roas)
+    plt.savefig("4-arm-kdeplot.png",dpi=200)
+    plt.cla()
+    plt.clf()
 
 daily_budgets = [daily_budget] * num_days_experiment
 
